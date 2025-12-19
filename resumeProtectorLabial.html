@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tabla de registros – Protector Labial (nuevos datos)</title>
+    <style>
+        :root {
+            --primary: #F5276F;
+            /* color base solicitado */
+            --primary-dark: #c11f59;
+            /* más oscuro */
+            --primary-light: #ff6fa1;
+            /* más claro */
+            --bg: #fff7fb;
+            /* fondo muy tenue */
+            --text: #222;
+            /* texto principal */
+            --border: #ffd0e1;
+            /* bordes suaves */
+        }
+
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid var(--border);
+            box-shadow: 0 6px 24px rgba(245, 39, 111, 0.15);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        header {
+            padding: 1rem 1.25rem;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            color: white;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .table-container {
+            padding: 1rem 1.25rem 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead th {
+            text-align: left;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            border-bottom: 2px solid var(--primary);
+            padding: .75rem .75rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        tbody td {
+            padding: .65rem .75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tbody tr:nth-child(odd) {
+            background: #fffdfd;
+        }
+
+        tbody tr:hover {
+            background: rgba(245, 39, 111, 0.06);
+        }
+
+        .num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Responsive (stacked) */
+        @media (max-width: 640px) {
+            thead {
+                display: none;
+            }
+
+            tbody td {
+                display: block;
+                width: 100%;
+            }
+
+            tbody tr {
+                display: block;
+                margin-bottom: .75rem;
+                border: 1px solid var(--border);
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>
+                Registros Protector Labial <em>cantidad</em> (descendente)
+                <span
+                    style="background: var(--primary-light); color:#fff; padding:.2rem .5rem; border-radius:999px; font-size:.75rem;">Bodega
+                    Arví</span>
+            </h1>
+        </header>
+        <div class="table-container">
+            <table aria-describedby="caption">
+                <caption id="caption" style="caption-side:bottom; padding-top:.75rem; color:#666;">
+                    Fuente: ProtectorLabial20251219141409.csv
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha(s)</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col" class="num">Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- filas generadas y ordenadas por cantidad desc -->
+                    <tr>
+                        <td>3/04/2025, 12/08/2025, 11/07/2025, 6/08/2025</td>
+                        <td>Luisa Fernanda Bermudez</td>
+                        <td class="num">4</td>
+                    </tr>
+                    <tr>
+                        <td>30/03/2025, 6/09/2025, 9/12/2025</td>
+                        <td>Antonio Alexander Henao Marulanda</td>
+                        <td class="num">3</td>
+                    </tr>
+                    <tr>
+                        <td>16/04/2025, 3/09/2025, 7/12/2025</td>
+                        <td>Eliana Del Pilar Taborda Uribe</td>
+                        <td class="num">3</td>
+                    </tr>
+                    <tr>
+                        <td>30/03/2025, 2/11/2025, 8/08/2025</td>
+                        <td>Luisa Alejandra Espinosa Chaverra</td>
+                        <td class="num">3</td>
+                    </tr>
+                    <tr>
+                        <td>5/04/2025, 1/04/2025, 5/04/2025</td>
+                        <td>Miguel Angel Rendon Medina</td>
+                        <td class="num">3</td>
+                    </tr>
+                    <tr>
+                        <td>11/05/2025, 11/05/2025, 16/08/2025</td>
+                        <td>Sebastian Londoño Gallo</td>
+                        <td class="num">3</td>
+                    </tr>
+                    <tr>
+                        <td>30/03/2025, 31/07/2025</td>
+                        <td>Alejandra Alzate Zapata</td>
+                        <td class="num">2</td>
+                    </tr>
+                    <tr>
+                        <td>21/04/2025, 21/10/2025</td>
+                        <td>Bryan Jeffrey Buitrago Lopez</td>
+                        <td class="num">2</td>
+                    </tr>
+                    <tr>
+                        <td>5/04/2025, 8/07/2025</td>
+                        <td>Emanuel Madrigal Guzman</td>
+                        <td class="num">2</td>
+                    </tr>
+                    <tr>
+                        <td>3/08/2025, 30/03/2025</td>
+                        <td>Jhomaro Alberto Gaviria Cataño</td>
+                        <td class="num">2</td>
+                    </tr>
+                    <tr>
+                        <td>9/04/2025, 9/11/2025</td>
+                        <td>Juan Mauricio Alzate Alzate</td>
+                        <td class="num">2</td>
+                    </tr>
+                    <tr>
+                        <td>26/04/2025, 23/08/2025</td>
+                        <td>Laura Andrea Hernandez Grajales</td>
+                        <td class="num">2</td>
+                    </tr>
+                    <tr>
+                        <td>11/04/2025, 13/11/2025</td>
+                        <td>Luz Eliana Rios Zapata</td>
+                        <td class="num">2</td>
+                    </tr>
+                    <tr>
+                        <td>7/04/2025, 6/09/2025</td>
+                        <td>Maria Fernanda Alzate Soto</td>
+                        <td class="num">2</td>
+                    </tr>
+                    <tr>
+                        <td>27/10/2025, 22/06/2025</td>
+                        <td>Yeferson Arley Atehortua Sanchez</td>
+                        <td class="num">2</td>
+                    </tr>
+                    <tr>
+                        <td>19/06/2025</td>
+                        <td>Santiago Andres Guiral Arias</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>23/04/2025</td>
+                        <td>Manuela Yepes Zapata</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>11/06/2025</td>
+                        <td>Laura Sofia Vinasco Gutierrez</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>5/11/2025</td>
+                        <td>Leidy Yohana Areiza Zapata</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>2/06/2025</td>
+                        <td>Lesli Melisa Salas Giraldo</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>27/07/2025</td>
+                        <td>Lizeth Johana Pabon Agudelo</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>14/05/2025</td>
+                        <td>Wber Albeiro Sepulveda Galvis</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>14/07/2025</td>
+                        <td>Luz Ceneida Alzate Rodriguez</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>4/07/2025</td>
+                        <td>Viviana Farley Vasquez Parra</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>10/04/2025</td>
+                        <td>Maria Alejandra Vasquez Gutierrez</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>2/05/2025</td>
+                        <td>Rogelio De Jesus Gallego Zuleta</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>23/08/2025</td>
+                        <td>Victor Enrique Agudelo Zapata</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>9/05/2025</td>
+                        <td>Valentina Mejia Henao</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>1/04/2025</td>
+                        <td>Maricela Muñoz Arango</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>6/07/2025</td>
+                        <td>Mario Ferney Nava Martinez</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2025</td>
+                        <td>Laura Palacio Moreno</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>1/04/2025</td>
+                        <td>Oswaldo De Jesus Tangarife Arias</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>23/06/2025</td>
+                        <td>Thomas Grisales Echavarria</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>14/04/2025</td>
+                        <td>Saray Grajales Vasquez</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>18/12/2025</td>
+                        <td>Adriana Marcela Saldarriaga Muñeton</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>2/09/2025</td>
+                        <td>Karen Gallon Arroyave</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>22/06/2025</td>
+                        <td>Kevin Mackey Ramirez Orozco</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>20/11/2025</td>
+                        <td>Estefania Rivas Moreno</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>13/09/2025</td>
+                        <td>Alexander De Jesus Gomez Gonzalez</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>2/10/2025</td>
+                        <td>Amor Alejandra Orlas Quintero</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>7/05/2025</td>
+                        <td>Ana Marisol Parra Grisales</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>9/04/2025</td>
+                        <td>Bernardo Alonso Ramirez Seguro</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>27/09/2025</td>
+                        <td>Blanca Elisenia Alzate Vasquez</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>19/12/2025</td>
+                        <td>Daniela Marin Montoya</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>4/04/2025</td>
+                        <td>David Humberto Betancur Holguin</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>11/05/2025</td>
+                        <td>Derman Andres Molina Molina</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>29/07/2025</td>
+                        <td>Diego Adolfo Garces Sarrazola</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>28/06/2025</td>
+                        <td>Diego Andres Rodriguez Arias</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>2/04/2025</td>
+                        <td>Erney Mauricio Echavarria Atehortua</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>19/07/2025</td>
+                        <td>Estefania Vanegas Valencia</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>21/04/2025</td>
+                        <td>Kelly Johana Palacios Moreno</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>10/04/2025</td>
+                        <td>Fabian Aicardo Giraldo Vargas</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2025</td>
+                        <td>Ivan Dario Henao Olarte</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>2/04/2025</td>
+                        <td>Jhomer Santiago Naranjo Restrepo</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>22/04/2025</td>
+                        <td>Jhon Alexis Ortiz Manco</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>5/04/2025</td>
+                        <td>Jhon Sebastian Alzate Molina</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>11/06/2025</td>
+                        <td>Jimmi Alejandro Castaño Rojas</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>29/08/2025</td>
+                        <td>Juan Daniel Herrera Valdez</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>25/07/2025</td>
+                        <td>Julian Camilo Garcia Moncada</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>15/08/2025</td>
+                        <td>Juliana Andrea Sanchez Serna</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>6/07/2025</td>
+                        <td>Juliana Ruiz Gamboa</td>
+                        <td class="num">1</td>
+                    </tr <tr>
+                    <td>6/07/2025</td>
+                    <td>Juliana Ruiz Gamboa</td>
+                    <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>11/04/2025</td>
+                        <td>Adriana Martinez Botero</td>
+                        <td class="num">1</td>
+                    </tr>
+                    <tr>
+                        <td>8/06/2025</td>
+                        <td>Yulieth Valentina Mosquera Usuga</td>
+                        <td class="num">1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
